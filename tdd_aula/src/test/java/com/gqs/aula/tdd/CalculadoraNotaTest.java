@@ -56,13 +56,13 @@ CalculadoraNota calc = new CalculadoraNota();
 void deveRejeitarA1negativa() {
 CalculadoraNota calc = new CalculadoraNota();
     assertThrows(IllegalArgumentException.class,
-    () -> calc.calcularNotaFinal(-35, 20, 30));
+    () -> calc.calcularNotaFinal(-20, 20, 30));
 }
 
 @Test
 void maximasvalem() {
 CalculadoraNota calc = new CalculadoraNota();
     assertThrows(IllegalArgumentException.class,
-    () -> calc.calcularNotaFinal(30, 30, 40));
+    () -> calc.calcularNotaFinal(31, 31, 41));
 }
 }
