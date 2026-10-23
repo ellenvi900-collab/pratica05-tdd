@@ -11,4 +11,5 @@ CalculadoraNota calc = new CalculadoraNota();
 double resultado = calc.calcularNotaFinal(20, 20, 30);
 assertEquals(70, resultado);
 }
+
 }
