@@ -65,4 +65,28 @@ CalculadoraNota calc = new CalculadoraNota();
     assertThrows(IllegalArgumentException.class,
     () -> calc.calcularNotaFinal(31, 31, 41));
 }
+
+@Test 
+void deveAprovarComNotaEFrequenciaSuficientes(){
+   CalculadoraNota calc = new CalculadoraNota();
+   assertEquals("APROVADO", calc.situacao(80,75));
+}
+
+@Test 
+void deveReprovarComNotaBaixa(){
+   CalculadoraNota calc = new CalculadoraNota();
+   assertEquals("REPROVADO", calc.situacao(60,75));
+}
+
+@Test 
+void deveReprovarPorFrequenciaMesmoComNotaAlta(){
+   CalculadoraNota calc = new CalculadoraNota();
+   assertEquals("REPROVADO", calc.situacao(94,74));
+}
+
+@Test 
+void deveAprovarComFrequenciaExatamente75(){
+   CalculadoraNota calc = new CalculadoraNota();
+   assertEquals("REPROVADO", calc.situacao(70,75));
+}
 }
